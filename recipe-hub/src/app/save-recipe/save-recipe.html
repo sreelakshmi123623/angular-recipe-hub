@@ -1,0 +1,29 @@
+<!-- <p>save-recipe works!</p> -->
+
+<div class="container my-5">
+    <h1 class="text-warning fw-bolder">Your Saved-Recipes</h1>
+    <div class="row my-5">
+        @if(saveRecipe.length>0){
+        @for(item of saveRecipe; track $index){
+        <div class="col-lg-3">
+            <div class="p-3">
+                <img class="card-img-top-rounded" width="100%" [src]="item.image"
+                    alt="">
+                <div class="d-flex justify-content-between mt-2">
+                    <h5 class="text-danger">{{item.recipeName}}</h5>
+                    <!-- <h6 class="text-danger">{{item.cuisine}}</h6> -->
+
+                    <button (click)="removeRecipe(item._id)" class="btn"><i class="fa-solid fa-trash text-danger"></i></button>
+                </div>
+            </div>
+        </div>}
+    }@else{
+
+        <div>
+            <h1 class="text-danger text-center fw-bolder">Your saved collection is empty....</h1>
+        </div>
+    }
+
+
+    </div>
+</div>

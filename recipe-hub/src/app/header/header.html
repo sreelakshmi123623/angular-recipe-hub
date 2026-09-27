@@ -1,0 +1,45 @@
+<!-- <p>header works!</p> -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid bg-success">
+    <a class="navbar-brand  text-light fs-4 fw-bold" routerLink="" > <img src="https://img.freepik.com/premium-photo/image-photograph-cook-preparing-plate-food-her-kitchen-concept-is-haute-cuisine-where-dishes-are-from-elegant-restaurant-image-created-with-ai_22736-3049.jpg" style="width: 80px; margin: 5px;" alt="">Cook-Book</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" routerLink="/recipe">Recipes</a>
+        </li>
+        <li class="nav-item">
+             <a class="nav-link text-light" routerLink="/about">Aboute</a>
+             </li>
+             <li class="nav-item">
+             <a class="nav-link text-light" routerLink="/contact">Contact</a>
+             </li>
+            
+      </ul>
+      <div class="dropdown">
+                <button class="btn btn-light bg-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-user-large"></i>
+                    @if (isLoggedIn){  
+                        <span class="text-light fw-bolder">Hi {{loginUserName}}</span> 
+                    }       
+                </button>
+                <ul class="dropdown-menu">    
+                  @if (isLoggedIn){    
+                        <li><a class="dropdown-item" routerLink="/saved-recipes">Saved-Recipes</a></li>
+                    <li><button (click)="logOut()" class="dropdown-item" >Logout</button></li>
+                  }@else{
+                     <li><a class="dropdown-item" routerLink="/login" >Login</a></li>
+                        <li><a class="dropdown-item" routerLink="/register">Register</a></li>  
+                  }      
+                </ul>
+            </div>
+    </div>
+  </div>
+</nav>

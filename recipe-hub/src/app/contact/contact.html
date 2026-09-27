@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookpedia Contact Page</title>
+
+</head>
+
+<body class="bg-light">
+
+  
+
+    <!-- Contact Banner -->
+    <section class="bg-success text-white py-5">
+        <div class="container text-center py-5">
+
+            <h1 class="display-2 mb-4">
+                Contact Us
+            </h1>
+
+            <p class="fs-5 w-75 mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit minima odio ab fugiat eaque sit soluta quibusdam
+                sed minus iure facere necessitatibus.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Left Side -->
+                <div class="col-lg-6">
+
+                    <h2 class="display-5 mb-4">
+                        Get In Touch
+                    </h2>
+
+                    <p class="fs-5 text-secondary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Nisi quasi odio aperiam! Quasi eius expedita,
+                        voluptatibus dolorem corrupti accusantium non.
+                    </p>
+
+                    <!-- Address -->
+                    <div class="d-flex align-items-start mt-4">
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:60px; height:60px;">
+
+                            <i class="fa-solid fa-location-dot text-white"></i>
+                        </div>
+
+                        <div class="ms-3">
+                            <h3>Address</h3>
+                            <p class="fs-5 text-secondary">
+                                NYC 4567, PO Berlin.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="d-flex align-items-start mt-4">
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:60px; height:60px;">
+
+                            <i class="fa-solid fa-phone text-white"></i>
+                        </div>
+
+                        <div class="ms-3">
+                            <h3>Phone Number</h3>
+                            <p class="fs-5 text-secondary">
+                                9086754321
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Email -->
+                    <div class="d-flex align-items-start mt-4">
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:60px; height:60px;">
+
+                            <i class="fa-solid fa-envelope text-white"></i>
+                        </div>
+
+                        <div class="ms-3">
+                            <h3>E Mail</h3>
+                            <p class="fs-5 text-secondary">
+                                mail@gmail.com
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <hr class="my-5">
+
+                    <!-- Social Media -->
+                    <h2 class="mb-4">
+                        Follow Us
+                    </h2>
+
+                    <div class="d-flex gap-3">
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:55px; height:55px;">
+
+                            <i class="fa-brands fa-facebook-f text-white"></i>
+                        </div>
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:55px; height:55px;">
+
+                            <i class="fa-brands fa-instagram text-white"></i>
+                        </div>
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:55px; height:55px;">
+
+                            <i class="fa-brands fa-twitter text-white"></i>
+                        </div>
+
+                        <div class="bg-success rounded-circle d-flex justify-content-center align-items-center"
+                            style="width:55px; height:55px;">
+
+                            <i class="fa-brands fa-youtube text-white"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right Side -->
+                <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0">
+
+                    <div class="card shadow border-0 p-4">
+
+                        <h2 class="mb-5">
+                            Client Testimony
+                        </h2>
+
+                        <form [formGroup]="testomonyForm" (ngSubmit)="addTestimony()" >
+
+                            <input type="text" name="name" formControlName="name"
+                                class="form-control form-control-lg mb-4"
+                                placeholder="Name">
+
+                            <input type="email" name="email" formControlName="email"
+                                class="form-control form-control-lg mb-4"
+                                placeholder="E Mail">
+
+                            <textarea class="form-control form-control-lg mb-4" name="message" formControlName="message"
+                                rows="4"
+                                placeholder="Message"></textarea>
+
+                            <p class="text-secondary fs-5">
+                                By Submitting, your agreeing the terms and
+                                condition of our website. We may use your
+                                details in our site.
+                            </p>
+
+                            <div class="text-end">
+                                <button class="btn btn-success btn-lg px-4">
+                                    Submit
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+   <!-- Map -->
+<section class="pb-5">
+    <div class="container">
+
+        <iframe
+            src="https://www.google.com/maps?q=infopark%20kochi&output=embed"
+            width="100%"
+            height="450"
+            class="border-0 rounded"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-success py-5">
+        <div class="container">
+
+            <div class="row align-items-center text-white">
+
+                <div class="col-lg-6">
+                    <h2 class="display-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Cookpedia
+                    </h2>
+                </div>
+
+                <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                    <h2>
+                        Sign up for our news letter
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+   
+
+</body>
+</html>
